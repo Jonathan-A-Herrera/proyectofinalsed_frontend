@@ -87,7 +87,6 @@ body{
 .btn-primary{background:var(--primary);color:white}
 .btn-ghost{background:#f0f0f0;color:#333}
 
-/* Forms */
 .form-card{
   max-width:720px;
   background:var(--card);
@@ -101,10 +100,8 @@ input[type="text"], input[type="email"], input[type="date"], textarea{
 textarea{min-height:120px;resize:vertical}
 label{display:block;margin-bottom:6px;font-weight:600;font-size:14px}
 
-/* small */
 .meta{font-size:13px;color:#666;margin-top:6px}
 
-/* footer */
 .site-footer{
   background:var(--primary);
   color:white;
@@ -114,7 +111,6 @@ label{display:block;margin-bottom:6px;font-weight:600;font-size:14px}
   bottom:0;
 }
 
-/* responsive small */
 @media (max-width:760px){
   .feed{justify-content:center}
   .report-card{width:100%}

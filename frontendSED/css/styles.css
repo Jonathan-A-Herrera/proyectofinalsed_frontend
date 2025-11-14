@@ -1,0 +1,129 @@
+:root{
+  --bg: #f4f4f4;
+  --card: #fff;
+  --primary: #2a7ae4;
+  --text: #333;
+  --radius: 8px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Open Sans", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.site-header{
+  background:var(--primary);
+  color:white;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{width:48px;height:48px;border-radius:6px;object-fit:cover}
+
+.nav button{
+  margin-left:8px;
+  background:white;
+  color:var(--primary);
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.nav button:hover{opacity:0.95;transform:translateY(-1px)}
+
+.hidden{display:none!important}
+
+.app{
+  padding:24px;
+  flex:1 0 auto;
+}
+
+/* Feed / Card */
+.feed{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.report-card{
+  background:var(--card);
+  width:340px;
+  border-radius:var(--radius);
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.report-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.report-body{padding:14px;flex:1}
+.report-body h3{margin:0 0 8px 0;font-size:18px}
+.report-body p{margin:6px 0;color:#444;font-size:14px}
+.report-actions{display:flex;gap:8px;margin-top:10px}
+.btn{
+  padding:8px 10px;border-radius:8px;border:none;cursor:pointer;font-weight:600;
+}
+.btn-primary{background:var(--primary);color:white}
+.btn-ghost{background:#f0f0f0;color:#333}
+
+/* Forms */
+.form-card{
+  max-width:720px;
+  background:var(--card);
+  padding:18px;border-radius:var(--radius);
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+}
+.form-row{margin-bottom:12px}
+input[type="text"], input[type="email"], input[type="date"], textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;font-size:14px;
+}
+textarea{min-height:120px;resize:vertical}
+label{display:block;margin-bottom:6px;font-weight:600;font-size:14px}
+
+/* small */
+.meta{font-size:13px;color:#666;margin-top:6px}
+
+/* footer */
+.site-footer{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:10px;
+  position:sticky;
+  bottom:0;
+}
+
+/* responsive small */
+@media (max-width:760px){
+  .feed{justify-content:center}
+  .report-card{width:100%}
+}
+@media (max-width:480px){
+  .site-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .nav button{margin-left:0}
+}
